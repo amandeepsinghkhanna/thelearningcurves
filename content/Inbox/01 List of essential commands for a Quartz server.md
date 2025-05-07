@@ -1,7 +1,8 @@
 ---
-title: Essential commands for maintaining the Quartz server
+title: Essential commands for maintaining the quartz server
 date: 2025-05-07
 enableTOC: "true"
+note-id: "01"
 ---
 ## Building/starting the quartz server
 ```cmd
