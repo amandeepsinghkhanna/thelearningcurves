@@ -20,7 +20,7 @@ const config: QuartzConfig = {
       typography: {
         title: "Rock Salt",
 		header: "Cutive Mono",
-        body: "Cutive Mono",
+        body: "Roboto Mono",
         code: "IBM Plex Mono",
       },
       colors: {
