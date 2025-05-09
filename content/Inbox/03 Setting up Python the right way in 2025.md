@@ -1,5 +1,5 @@
 ---
-title: Setting up Python the right way in 2025
+title: How to Set Up Python the Right Way in 2025 (Without Anaconda)
 author: Amandeep Singh Khanna
 tags:
   - python
