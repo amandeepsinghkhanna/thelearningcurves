@@ -19,15 +19,14 @@ In case you run into an error that PowerShell is not authorized for running scri
 ```bash
 Set-ExecutionPolicy RemoteSigned
 ```
-To be able to use pyenv, close and re-start the PowerShell.
-
+To be able to use pyenv, close and re-start PowerShell.
 # 2. Installing different versions of Python
 Pyenv like Anaconda package manager helps us install multiple versions of python. 
 ## 2.1. Getting list of python versions available for installation
-```cmd
+```powershell
 pyenv install --list
 ```
 ## 2.2. Installing a specific version of python
-```cmd
+```powershell
 pyenv install <name of the python version from the list>
 ```
