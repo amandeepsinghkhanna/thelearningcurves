@@ -1,5 +1,5 @@
 ---
-title: Introduction to pyenv
+title: Setting up Python the right way in 2025
 author: Amandeep Singh Khanna
 tags:
   - datascience
