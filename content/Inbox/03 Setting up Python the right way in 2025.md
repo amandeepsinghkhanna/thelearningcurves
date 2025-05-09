@@ -39,3 +39,8 @@ pyenv versions
 pyenv global <name of the python version from the list>
 ```
 Setting a version of Python as a global version makes it the default version that is chosen to execute your code unless explicitly specified.
+## 2.5 Checking if setting the default version of Python worked
+```powershell
+python --version
+```
+This command should show the version of Python set as the default/global version in the previous command.

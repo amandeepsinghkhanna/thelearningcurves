@@ -1,1 +1,0 @@
-Don't trouble the trouble, if you trouble the trouble the trouble will trouble you!
