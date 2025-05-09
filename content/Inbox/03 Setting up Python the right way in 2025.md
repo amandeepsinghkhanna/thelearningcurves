@@ -2,45 +2,127 @@
 title: Setting up Python the right way in 2025
 author: Amandeep Singh Khanna
 tags:
-  - datascience
-  - python-programming
-  - set-up
-  - dev-environment
-  - ai
-  - ml
+  - python
+  - python-setup
+  - pyenv
+  - data-science
+  - machine-learning
+  - development-environment
+  - programming-tools
 ---
-Ever since Anaconda pulled a fast one on us by making Python usage for commercial and academic purposes a paid affair, I've been searching for a Python package management solution that isn't controlled by a large corporate entity. I went through a lot of options to find the one that finally felt perfect and as seamless as Anaconda. 
-# 1. Installing pyenv
-Pyenv can be installed on a windows system by running the following command on the PowerShell.
-```bash
+If you’ve been frustrated by Anaconda’s recent licensing changes — making Python usage for commercial and academic purposes a paid affair — you’re not alone. I went on a deep dive to find an alternative Python package and environment management setup that feels just as seamless, but is fully open-source and free from corporate control.
+
+After trying many tools, I found a clean, minimal, and highly customizable workflow using **Pyenv** and **venv**. Here's a complete guide to setting up Python the right way in 2025.
+
+---
+
+# Step 1: Installing Pyenv on Windows
+
+**Pyenv** is a lightweight Python version management tool. Here’s how to install it on a Windows system:
+
+```powershell
 Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 ```
-In case you run into an error that PowerShell is not authorized for running scripts, try running the script below on PowerShell and then the command specified above.
-```bash
-Set-ExecutionPolicy RemoteSigned
+
+### Troubleshooting: PowerShell Script Permissions
+
+If you get a script execution error, update your policy with:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
 ```
-To be able to use pyenv, close and re-start PowerShell.
-# 2. Installing different versions of Python
-Pyenv like Anaconda package manager helps us install multiple versions of python. 
-## 2.1. Getting list of python versions available for installation
+
+Then re-run the install script. Once installed, restart PowerShell to make the changes take effect.
+
+---
+
+# Step 2: Managing Python Versions with Pyenv
+
+With Pyenv, you can install and switch between multiple Python versions — just like you would with Anaconda.
+
+### 2.1 View Available Python Versions
+
 ```powershell
 pyenv install --list
 ```
-## 2.2. Installing a specific version of Python
+
+### 2.2 Install a Specific Python Version
+
 ```powershell
-pyenv install <name of the python version from the list>
+pyenv install <version>
 ```
-## 2.3. List all the installed versions of Python
+
+Replace `<version>` with the version string you found in the list.
+
+### 2.3 List Installed Python Versions
+
 ```powershell
 pyenv versions
 ```
-## 2.4 Setting a default version of Python
+
+### 2.4 Set a Global Default Python Version
+
 ```powershell
-pyenv global <name of the python version from the list>
+pyenv global <version>
 ```
-Setting a version of Python as a global version makes it the default version that is chosen to execute your code unless explicitly specified.
-## 2.5 Checking if setting the default version of Python worked
+
+This sets the selected version as your system-wide default.
+
+### 2.5 Verify the Default Python Version
+
 ```powershell
 python --version
 ```
-This command should show the version of Python set as the default/global version in the previous command.
+
+This should return the version you set using `pyenv global`.
+
+---
+
+# Step 3: Creating Python Virtual Environments with venv
+
+While Pyenv handles Python versions, it doesn’t manage isolated environments like Conda does. That’s where **`venv`** — Python’s built-in virtual environment tool — comes in.
+
+### Why I Prefer venv
+
+Keeping things simple and vanilla helps avoid toolchain bloat. `venv` is lightweight, built-in, and works across platforms.
+
+### Create a Virtual Environment
+
+```bash
+python -m venv myenv
+```
+
+Activate it using:
+
+- **Windows (CMD):**
+  ```cmd
+  myenv\Scripts\activate
+  ```
+- **PowerShell:**
+  ```powershell
+  .\myenv\Scripts\Activate.ps1
+  ```
+- **macOS/Linux:**
+  ```bash
+  source myenv/bin/activate
+  ```
+
+### Deactivate the Virtual Environment
+
+```bash
+deactivate
+```
+
+---
+
+# Final Thoughts
+
+If you're looking for a professional-grade Python setup in 2025 without corporate entanglements, Pyenv and venv provide a clean, modular alternative to Anaconda.
+
+This stack keeps your development workflow:
+- Free and open-source
+- Easy to maintain
+- Compatible across platforms
+- Ideal for data science, machine learning, or software development
+
+---
