@@ -124,5 +124,3 @@ This stack keeps your development workflow:
 - Easy to maintain
 - Compatible across platforms
 - Ideal for data science, machine learning, or software development
-
----
